@@ -38,7 +38,6 @@ College ERP using MERN Stack
 
 Admin
 
-https://user-images.githubusercontent.com/90241373/156794210-af4db587-1aba-4289-9196-07f2e179d9bb.mp4
 
 <br>
 

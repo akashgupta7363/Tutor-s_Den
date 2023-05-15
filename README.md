@@ -1,5 +1,4 @@
-# COLLEGE ERP
-
+# CTuitor's Den
 College ERP using MERN Stack
 
 # TechStack

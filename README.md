@@ -1,5 +1,5 @@
-# CTuitor's Den
-College ERP using MERN Stack
+# Tuitor's Den 
+ERPt-type  using MERN Stack
 
 # TechStack
 

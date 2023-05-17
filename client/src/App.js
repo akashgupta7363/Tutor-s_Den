@@ -42,11 +42,13 @@ import DeleteFaculty from "./components/admin/deleteFaculty/DeleteFaculty";
 import DeleteStudent from "./components/admin/deleteStudent/DeleteStudent";
 import DeleteSubject from "./components/admin/deleteSubject/DeleteSubject";
 import CreateNotice from "./components/admin/createNotice/CreateNotice";
+import RegisterAdmin from "./components/login/RegisterAdmin";
 
 const App = () => {
   return (
     <Routes>
       <Route exact path="/" element={<Login />} />
+      <Route path="/register" element={<RegisterAdmin />} />
 
       {/* Admin  */}
 

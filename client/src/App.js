@@ -49,6 +49,7 @@ const App = () => {
   return (
     <Routes>
       <Route exact path="/" element={<LandingPage />} />
+      <Route path="/login" elemnt={<Login />} />
       <Route path="/register" element={<RegisterAdmin />} />
 
       {/* Admin  */}

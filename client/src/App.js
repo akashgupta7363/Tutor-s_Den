@@ -1,8 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
-
-
 import AddAdmin from "./components/admin/addAdmin/AddAdmin";
 import AddDepartment from "./components/admin/addDepartment/AddDepartment";
 import AddFaculty from "./components/admin/addFaculty/AddFaculty";
@@ -46,11 +43,12 @@ import DeleteStudent from "./components/admin/deleteStudent/DeleteStudent";
 import DeleteSubject from "./components/admin/deleteSubject/DeleteSubject";
 import CreateNotice from "./components/admin/createNotice/CreateNotice";
 import RegisterAdmin from "./components/login/RegisterAdmin";
+import LandingPage from "./components/landingpage/LandingPage";
 
 const App = () => {
   return (
     <Routes>
-      <Route exact path="/" element={<Login />} />
+      <Route exact path="/" element={<LandingPage />} />
       <Route path="/register" element={<RegisterAdmin />} />
 
       {/* Admin  */}

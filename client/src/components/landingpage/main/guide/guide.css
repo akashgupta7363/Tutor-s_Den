@@ -1,0 +1,22 @@
+
+
+.div {
+   padding: 2rem;
+   height: 100vh;
+}
+
+.div h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem;
+    line-height: 1.5;
+}
+
+.div h1 span {
+    color: rgb(30,30,207);
+}
+
+.video-div {
+    margin: 1rem auto;
+    width: 80%;
+}

@@ -1,0 +1,84 @@
+
+.navbar {
+    
+}
+
+.container-fluid {
+    border-bottom: 2px solid #000;
+    background-color: #fff;
+
+}
+
+.logo-den {
+    font-weight: 700;
+    font-size: 2rem;
+    color: rgb(30, 30, 207);
+    margin-left: 10px;
+}
+
+ .navbar-brand{
+    display: flex;
+    align-items: baseline;
+    padding: 10px 20px;
+}
+
+
+b {
+    position: relative;
+        right: 1rem;
+        font-weight: 400;
+        letter-spacing: .1rem;
+        padding: 10px 40px;
+        translate: uppercase;
+        font-size: 1.5rem;
+
+}
+
+b:hover {
+    border-bottom: 1px solid #000;
+}
+
+
+.main-heading div {
+   
+    font-size: 5rem;
+    font-weight:900;
+    line-height: 1.2;
+}
+
+.main-heading p {
+    opacity: .6;
+    font-size: 1.5rem;
+    margin:.6rem 7px;
+}
+
+
+.main-heading .den {
+    color: rgb(30, 30, 207);
+}
+
+.main-heading button {
+    padding: 12px 50px;
+   
+    outline: none;
+    cursor: pointer;
+    border: none;
+    margin: .6rem 7px;
+    border-radius: 5px;
+    border: 1px solid rgb(30, 30, 207);
+}
+
+.main-heading .register {
+
+    color: #fff;
+    background-color: rgb(30, 30, 207);
+   
+
+}
+
+.main-heading .about {
+    color:rgb(30, 30, 207);
+    background-color: #fff;
+   
+
+}

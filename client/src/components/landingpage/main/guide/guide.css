@@ -3,6 +3,7 @@
 .div {
    padding: 2rem;
    height: 100vh;
+   background-color: #ededed;
 }
 
 .div h1 {

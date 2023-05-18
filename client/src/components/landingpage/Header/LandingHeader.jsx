@@ -1,7 +1,7 @@
 
-import './header.css';
+import './landingheader.css';
 
-function Header() {
+function LandingHeader() {
     return(
         <>
              <div>
@@ -43,4 +43,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default LandingHeader;

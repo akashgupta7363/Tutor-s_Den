@@ -1,0 +1,30 @@
+
+.main-div {
+    height:100vh;
+    background-color: #ededed;
+    padding: 2rem;
+
+}
+
+.main-div h1 {
+    font-size: 3rem;
+
+}
+
+.main-div h1 span {
+    color: rgb(30,30,207);
+}
+
+.accordion  {
+    margin: 1rem auto;
+    width: 85%;
+    padding: 1rem;
+    background-color: #ededed;
+}
+
+.accordion-body {
+    background-color: #ffffff;
+    padding: .8rem;
+    opacity: .6;
+}
+

@@ -1,16 +1,16 @@
-
 .footer {
-    height: 200px;
-    width: 100%;
-    background-color: #fff;
-    position: relative;
-    bottom: 0;
+  height: 200px;
+  width: 100%;
+  background-color: #ededed;
+  position: relative;
+  bottom: 0;
+  padding: 1rem;
 }
 
 .copyright {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    opacity: .6;
-    margin-top: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  opacity: 0.4;
+  margin-top: 3rem;
 }

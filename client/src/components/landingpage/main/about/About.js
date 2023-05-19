@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./about.css";
+import "./about1234.css";
 
 const datas = [
   {
@@ -45,26 +45,33 @@ const About = () => {
   return (
     <div id="about">
       ,
-      <h1>
-        Meet Our <span>Team</span>
+      <h1
+        style={{
+          fontSize: "3rem",
+          textAlign: "center",
+          padding: "2rem",
+          lineHeight: "1.5",
+        }}
+      >
+        Meet Our <span style={{ color: "rgb(30, 30, 207)" }}>Team</span>
       </h1>
-      <div className="card-container">
+      <div className="cardooo-container">
         {datas.map((data) => {
           return (
             <>
-              <div className="card">
+              <div className="cardooo">
                 <div className="upper-portion"></div>
-                <div className="image-container">
+                <div className="image-containerooo">
                   <img src={data.imageURL} />
                 </div>
                 <div className="content-portion">
                   <h4>{data.name}</h4>
-                  <div className="info">
+                  <div className="infoooo">
                     <p className="roll">
                       <number>{data.roll}</number>
                     </p>
                   </div>
-                  <div className="info">
+                  <div className="infoooo">
                     <p>
                       <span>Role - </span>
                       {data.role}{" "}

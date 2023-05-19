@@ -150,7 +150,13 @@ function Faq() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <h2>
+        <h2
+          style={{
+            marginTop: "6rem",
+            fontWeight: "500",
+            fontSize: "1.3rem",
+          }}
+        >
           If you have any additional questions or need further assistance, feel
           free to contact the college administration or the support team for the
           College Management System Portal.

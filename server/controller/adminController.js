@@ -158,6 +158,57 @@ export const addAdmin = async (req, res) => {
     res.status(500).json(errors);
   }
 };
+export const registerNewAdmin = async (req, res) => {
+  try {
+    const {
+      name,
+      institute,
+      dob,
+      department,
+      contactNumber,
+      avatar,
+      email,
+      joiningYear,
+      password,
+    } = req.body;
+    const errors = { emailError: String };
+    const existingAdmin = await Admin.findOne({
+      $or: [{ email }, { institute }],
+    });
+    if (existingAdmin) {
+      errors.emailError = "Email or Institute is already registered";
+
+      return res.status(400).json(errors);
+    }
+    const emailFirst = email.split("@");
+    var username = emailFirst[0];
+    const hashedPassword = await bcrypt.hash(password, 10);
+    var passwordUpdated = true;
+    const newAdmin = await new Admin({
+      name,
+      email,
+      institute,
+      password: hashedPassword,
+      joiningYear,
+      username,
+      department,
+      avatar,
+      contactNumber,
+      dob,
+      passwordUpdated,
+    });
+    await newAdmin.save();
+    return res.status(200).json({
+      success: true,
+      message: "Admin registerd successfully",
+      response: newAdmin,
+    });
+  } catch (error) {
+    const errors = { backendError: String };
+    errors.backendError = error;
+    res.status(500).json(errors);
+  }
+};
 
 export const createNotice = async (req, res) => {
   try {
@@ -409,7 +460,7 @@ export const deleteAdmin = async (req, res) => {
     const errors = { noAdminError: String };
     for (var i = 0; i < admins.length; i++) {
       var admin = admins[i];
-   
+
       await Admin.findOneAndDelete({ _id: admin });
     }
     res.status(200).json({ message: "Admin Deleted" });
@@ -425,7 +476,7 @@ export const deleteFaculty = async (req, res) => {
     const errors = { noFacultyError: String };
     for (var i = 0; i < faculties.length; i++) {
       var faculty = faculties[i];
- 
+
       await Faculty.findOneAndDelete({ _id: faculty });
     }
     res.status(200).json({ message: "Faculty Deleted" });
@@ -441,7 +492,7 @@ export const deleteStudent = async (req, res) => {
     const errors = { noStudentError: String };
     for (var i = 0; i < students.length; i++) {
       var student = students[i];
-   
+
       await Student.findOneAndDelete({ _id: student });
     }
     res.status(200).json({ message: "Student Deleted" });

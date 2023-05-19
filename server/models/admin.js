@@ -11,6 +11,11 @@ const adminSchema = mongoose.Schema(
       required: true,
       unique: true,
     },
+    institute: {
+      type: String,
+      required: true,
+      unique: true,
+    },
     password: {
       type: String,
     },

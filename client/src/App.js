@@ -44,7 +44,6 @@ import DeleteSubject from "./components/admin/deleteSubject/DeleteSubject";
 import CreateNotice from "./components/admin/createNotice/CreateNotice";
 import RegisterAdmin from "./components/login/RegisterAdmin";
 import LandingPage from "./components/landingpage/LandingPage";
-import About from "./components/landingpage/main/about/About";
 
 const App = () => {
   return (

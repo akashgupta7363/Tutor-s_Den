@@ -30,7 +30,7 @@
   padding: 10px 20px;
 }
 
-b {
+.b {
   float: right;
   margin-top: -4.2rem;
   right: 1rem;
@@ -41,8 +41,9 @@ b {
   font-size: 1.5rem;
 }
 
-b:hover {
+.b:hover {
   border-bottom: 1px solid #000;
+  color: rgb(30, 30, 207);
 }
 
 .main-heading div {
@@ -61,7 +62,8 @@ b:hover {
   color: rgb(30, 30, 207);
 }
 
-.main-heading button {
+.main-heading .register,
+.aboutpage {
   padding: 12px 50px;
 
   outline: none;

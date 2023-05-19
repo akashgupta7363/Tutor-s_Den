@@ -7,6 +7,7 @@ const main = () => {
   return (
     <>
       <Guide></Guide>
+      <Faq></Faq>
       <About></About>
     </>
   );

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./landingheader.css";
 
 function LandingHeader() {
@@ -16,7 +17,9 @@ function LandingHeader() {
               />
               <span className="logo-den">Den</span>
             </a>
-            <b>Login</b>
+            <Link className="b" to="/login">
+              Login
+            </Link>
           </div>
         </nav>
 
@@ -33,8 +36,12 @@ function LandingHeader() {
                 An online platform where Teachers and <br />
                 students connect...
               </p>
-              <button className="register">Register</button>
-              <button className="about">About Us</button>
+              <Link to="/register" className="register">
+                Register
+              </Link>
+              <a href="#about" className="aboutpage">
+                About Us
+              </a>
             </div>
           </div>
           <div className="right">

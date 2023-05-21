@@ -31,6 +31,9 @@ export const getAllSubject = () => API.get("/api/admin/getallsubject");
 export const updateAdmin = (updatedAdmin) =>
   API.post("/api/admin/updateprofile", updatedAdmin);
 
+export const registerAdmin = (registerAdminData) =>
+  API.post("/api/admin/registerAdmin", registerAdminData);
+
 export const addAdmin = (admin) => API.post("/api/admin/addadmin", admin);
 export const createNotice = (notice) =>
   API.post("/api/admin/createnotice", notice);

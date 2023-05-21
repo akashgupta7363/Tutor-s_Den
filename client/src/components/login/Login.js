@@ -5,14 +5,14 @@ const Login = () => {
   return (
     <div
       className="h-screen w-screen backdrop-blur-md flex  justify-center"
-      style={{ background: "white" }}
+      style={{ background: "#F4F6FA" }}
     >
       <div className="flex flex-col items-center mt-10 space-y-32">
         <div className="text-3xl font-semibold bg-blue-500 text-white w-1/3 text-center py-4 bg-opacity-75 rounded-2xl flex p-6 justify-center shadow-2xl shadow-cyan-500 ">
           <Link to="/">
             <img src={logo} className="w-10 mr-6" />
           </Link>
-          Tuitor's Den
+          Tutor's Den
         </div>
         <div className="grid grid-cols-3 gap-28">
           <div className="h-64 w-64 space-y-11 shadow-2xl flex flex-col justify-center items-center bg-transparent backdrop-blur-md bg-gray-300 rounded-xl">

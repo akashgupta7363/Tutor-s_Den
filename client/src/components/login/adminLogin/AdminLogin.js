@@ -5,6 +5,8 @@ import { adminSignIn } from "../../../redux/actions/adminActions";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import Spinner from "../../../utils/Spinner";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Link } from "react-router-dom";
 
 const AdminLogin = () => {
   const [translate, setTranslate] = useState(false);
@@ -64,9 +66,9 @@ const AdminLogin = () => {
           }  duration-1000 transition-all space-y-6 rounded-3xl shadow-2xl`}
         >
           <h1 className="text-white text-3xl font-semibold">Admin</h1>
-          <div className="space-y-1">
+          <div className="space-y-1 ">
             <p className="text-[#515966] font-bold text-sm">Username</p>
-            <div className="bg-[#515966] rounded-lg w-[14rem] flex  items-center">
+            <div className="bg-[#515966] rounded-lg px-2 flex  items-center">
               <input
                 onChange={(e) => setUsername(e.target.value)}
                 value={username}
@@ -85,8 +87,7 @@ const AdminLogin = () => {
                 value={password}
                 required
                 type={showPassword ? "text" : "password"}
-                style={{ marginLeft: 10 }}
-                className=" bg-[#515966] text-white  rounded-lg outline-none mx-2 py-2  placeholder:text-sm"
+                className=" bg-[#515966] text-white  rounded-lg outline-none  py-2  placeholder:text-sm"
                 placeholder="Password"
               />
               {showPassword ? (
@@ -108,6 +109,12 @@ const AdminLogin = () => {
           >
             Login
           </button>
+          <Link
+            to="/register"
+            className="text-slate-200 hover:scale-110 transition delay-200"
+          >
+            As a new Institute Admin <ArrowForwardIcon />
+          </Link>
           {loading && (
             <Spinner
               message="Logging In"

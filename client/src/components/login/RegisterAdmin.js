@@ -1,25 +1,48 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import education from "../../assets/education.png";
 import * as classes from "../../utils/styles";
 import FileBase from "react-file-base64";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import * as api from "../../redux/api";
 
 function RegisterAdmin() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState({});
+  const navigate = useNavigate();
   const [value, setValue] = useState({
     name: "",
     dob: "",
     email: "",
     password: "",
     confirmPassword: "",
-    Institute: "",
+    institute: "",
     department: "",
     contactNumber: "",
     avatar: "",
     joiningYear: "",
   });
-  const handleSubmit = () => {};
+
+  const handleSubmit = async () => {
+    try {
+      setLoading(true);
+      if (!(value.password === value.confirmPassword)) {
+        alert("Password mismatch");
+        setLoading(false);
+        return;
+      }
+      const { data } = await api.registerAdmin(value);
+      alert("REGISTRATION Successfully");
+      console.log(data);
+      setLoading(false);
+
+      navigate("/login/adminLogin");
+    } catch (error) {
+      alert(error);
+      console.log(error);
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="bg-[#d6d9e0] h-screen flex items-center justify-center">
       <div className="flex flex-col  bg-[#f4f6fa] h-5/6 w-[95%] rounded-2xl shadow-2xl space-y-6 overflow-y-hidden">
@@ -56,10 +79,10 @@ function RegisterAdmin() {
                     required
                     className={classes.adminInput}
                     type="text"
-                    // value={value.name}
-                    // onChange={(e) =>
-                    //   setValue({ ...value, name: e.target.value })
-                    // }
+                    value={value.name}
+                    onChange={(e) =>
+                      setValue({ ...value, name: e.target.value })
+                    }
                   />
                 </div>
                 <div className={classes.adminForm3}>
@@ -70,10 +93,10 @@ function RegisterAdmin() {
                     required
                     className={classes.adminInput}
                     type="email"
-                    // value={value.email}
-                    // onChange={(e) =>
-                    //   setValue({ ...value, email: e.target.value })
-                    // }
+                    value={value.email}
+                    onChange={(e) =>
+                      setValue({ ...value, email: e.target.value })
+                    }
                   />
                 </div>
                 <div className={classes.adminForm3}>
@@ -84,10 +107,10 @@ function RegisterAdmin() {
                     className={classes.adminInput}
                     required
                     type="date"
-                    // value={value.dob}
-                    // onChange={(e) =>
-                    //   setValue({ ...value, dob: e.target.value })
-                    // }
+                    value={value.dob}
+                    onChange={(e) =>
+                      setValue({ ...value, dob: e.target.value })
+                    }
                   />
                 </div>
                 <div className={classes.adminForm3}>
@@ -98,10 +121,10 @@ function RegisterAdmin() {
                     required
                     className={classes.adminInput}
                     type="password"
-                    // value={value.email}
-                    // onChange={(e) =>
-                    //   setValue({ ...value, email: e.target.value })
-                    // }
+                    value={value.password}
+                    onChange={(e) =>
+                      setValue({ ...value, password: e.target.value })
+                    }
                   />
                 </div>
                 <div className={classes.adminForm3}>
@@ -112,10 +135,10 @@ function RegisterAdmin() {
                     required
                     className={classes.adminInput}
                     type="password"
-                    // value={value.email}
-                    // onChange={(e) =>
-                    //   setValue({ ...value, email: e.target.value })
-                    // }
+                    value={value.confirmPassword}
+                    onChange={(e) =>
+                      setValue({ ...value, confirmPassword: e.target.value })
+                    }
                   />
                 </div>
               </div>
@@ -128,10 +151,10 @@ function RegisterAdmin() {
                     required
                     className={classes.adminInput}
                     type="text"
-                    // value={value.email}
-                    // onChange={(e) =>
-                    //   setValue({ ...value, email: e.target.value })
-                    // }
+                    value={value.institute}
+                    onChange={(e) =>
+                      setValue({ ...value, institute: e.target.value })
+                    }
                   />
                 </div>
                 <div className={classes.adminForm3}>
@@ -141,10 +164,10 @@ function RegisterAdmin() {
                     required
                     className={classes.adminInput}
                     type="text"
-                    // value={value.email}
-                    // onChange={(e) =>
-                    //   setValue({ ...value, email: e.target.value })
-                    // }
+                    value={value.department}
+                    onChange={(e) =>
+                      setValue({ ...value, department: e.target.value })
+                    }
                   />
                 </div>
                 <div className={classes.adminForm3}>
@@ -155,10 +178,10 @@ function RegisterAdmin() {
                     required
                     className={classes.adminInput}
                     type="number"
-                    // value={value.email}
-                    // onChange={(e) =>
-                    //   setValue({ ...value, email: e.target.value })
-                    // }
+                    value={value.joiningYear}
+                    onChange={(e) =>
+                      setValue({ ...value, joiningYear: e.target.value })
+                    }
                   />
                 </div>
                 <div className={classes.adminForm3}>
@@ -169,10 +192,10 @@ function RegisterAdmin() {
                     placeholder="Contact Number"
                     className={classes.adminInput}
                     type="number"
-                    // value={value.contactNumber}
-                    // onChange={(e) =>
-                    //   setValue({ ...value, contactNumber: e.target.value })
-                    // }
+                    value={value.contactNumber}
+                    onChange={(e) =>
+                      setValue({ ...value, contactNumber: e.target.value })
+                    }
                   />
                 </div>
                 <div className={classes.adminForm3}>
@@ -181,9 +204,9 @@ function RegisterAdmin() {
                   <FileBase
                     type="file"
                     multiple={false}
-                    // onDone={({ base64 }) =>
-                    //   setValue({ ...value, avatar: base64 })
-                    // }
+                    onDone={({ base64 }) =>
+                      setValue({ ...value, avatar: base64 })
+                    }
                   />
                 </div>
               </div>
@@ -193,20 +216,21 @@ function RegisterAdmin() {
                 Submit
               </button>
               <button
-                // onClick={() => {
-                //   setValue({
-                //     name: "",
-                //     dob: "",
-                //     email: "",
-                //     department: "",
-                //     contactNumber: "",
-                //     avatar: "",
-                //     joiningYear: Date().split(" ")[3],
-                //     password: "",
-                //     username: "",
-                //   });
-                //   setError({});
-                // }}
+                onClick={() => {
+                  setValue({
+                    name: "",
+                    dob: "",
+                    email: "",
+                    institute: "",
+                    department: "",
+                    contactNumber: "",
+                    avatar: "",
+                    joiningYear: "",
+                    password: "",
+                    confirmPassword: "",
+                  });
+                  setError({});
+                }}
                 className={classes.adminFormClearButton}
                 type="button"
               >

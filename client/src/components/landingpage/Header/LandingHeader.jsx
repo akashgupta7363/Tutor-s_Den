@@ -30,7 +30,7 @@ function LandingHeader() {
                 <span style={{ fontSize: "4rem" }}>Hey there</span>
                 <br />
                 Welcome to <br />
-                Tuitor's <span className="den">Den</span>
+                Tutor's <span className="den">Den</span>
               </div>
               <p>
                 An online platform where Teachers and <br />

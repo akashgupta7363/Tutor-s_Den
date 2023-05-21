@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
         </nav>
         <p className="copyright">
-          &copy; 2023 Tuitor's <span>Den</span>
+          &copy; 2023 Tutor's <span>Den</span>
         </p>
       </div>
     </>

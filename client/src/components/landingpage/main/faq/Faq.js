@@ -57,9 +57,7 @@ function Faq() {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>
-              How do I access the College Management System Portal?
-            </Typography>
+            <Typography>How do I access these Portal?</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
@@ -157,9 +155,8 @@ function Faq() {
             fontSize: "1.3rem",
           }}
         >
-          If you have any additional questions or need further assistance, feel
-          free to contact the college administration or the support team for the
-          College Management System Portal.
+          If you have any additional questions or need further assistance,
+          <br /> feel free to contact our support team.
         </h2>
       </div>
     </div>

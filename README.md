@@ -1,5 +1,6 @@
-# Tuitor's Den 
-ERPt-type  using MERN Stack
+# Tutor's Den
+
+ERPt-type using MERN Stack
 
 # TechStack
 
@@ -25,12 +26,10 @@ ERPt-type  using MERN Stack
 10. Student can Update profile details, password in profile section
 11. Student can check their attendance, marks and subject list
 12. Error display feature available with form validation
-14. Modern UI
+13. Modern UI
 
 # Features to be added later in the future
 
 1. Mobile Responsiveness
 2. Sections other than academics
 3. More freedom to admin while adding new students,admins,faculties or subjects
-
-

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import education from "../../assets/education.png";
 import * as classes from "../../utils/styles";
 import FileBase from "react-file-base64";
@@ -8,7 +8,7 @@ import Spinner from "../../utils/Spinner";
 
 function RegisterAdmin() {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState({});
+
   const navigate = useNavigate();
   const [value, setValue] = useState({
     name: "",
@@ -229,7 +229,6 @@ function RegisterAdmin() {
                     password: "",
                     confirmPassword: "",
                   });
-                  setError({});
                 }}
                 className={classes.adminFormClearButton}
                 type="button"

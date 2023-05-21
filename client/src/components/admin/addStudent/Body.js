@@ -89,10 +89,11 @@ const Body = () => {
           <AddIcon />
           <h1>Add Student</h1>
         </div>
-        <div className=" mr-10 bg-white flex flex-col rounded-xl ">
+        <div className="overflow-scroll mr-10 bg-white flex flex-col rounded-xl ">
           <form
-            className={`${classes.adminForm0} scrollbar-thin scrollbar-track-white scrollbar-thumb-black overflow-y-scroll h-[30rem]`}
-            onSubmit={handleSubmit}>
+            className={`${classes.adminForm0} scrollbar-thin scrollbar-track-white scrollbar-thumb-black overflow-y-scroll h-[25rem]`}
+            onSubmit={handleSubmit}
+          >
             <div className={classes.adminForm1}>
               <div className={classes.adminForm2l}>
                 <div className={classes.adminForm3}>
@@ -189,7 +190,8 @@ const Body = () => {
                     value={value.year}
                     onChange={(e) =>
                       setValue({ ...value, year: e.target.value })
-                    }>
+                    }
+                  >
                     <MenuItem value="">None</MenuItem>
                     <MenuItem value="1">1</MenuItem>
                     <MenuItem value="2">2</MenuItem>
@@ -209,7 +211,8 @@ const Body = () => {
                     value={value.department}
                     onChange={(e) =>
                       setValue({ ...value, department: e.target.value })
-                    }>
+                    }
+                  >
                     <MenuItem value="">None</MenuItem>
                     {departments?.map((dp, idx) => (
                       <MenuItem key={idx} value={dp.department}>
@@ -228,7 +231,8 @@ const Body = () => {
                     value={value.gender}
                     onChange={(e) =>
                       setValue({ ...value, gender: e.target.value })
-                    }>
+                    }
+                  >
                     <MenuItem value="">None</MenuItem>
                     <MenuItem value="Male">Male</MenuItem>
                     <MenuItem value="Female">Female</MenuItem>
@@ -297,7 +301,8 @@ const Body = () => {
                     value={value.section}
                     onChange={(e) =>
                       setValue({ ...value, section: e.target.value })
-                    }>
+                    }
+                  >
                     <MenuItem value="">None</MenuItem>
                     <MenuItem value="1">1</MenuItem>
                     <MenuItem value="2">2</MenuItem>
@@ -343,7 +348,8 @@ const Body = () => {
                   setError({});
                 }}
                 className={classes.adminFormClearButton}
-                type="button">
+                type="button"
+              >
                 Clear
               </button>
             </div>

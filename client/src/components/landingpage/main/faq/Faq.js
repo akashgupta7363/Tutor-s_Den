@@ -51,7 +51,7 @@ function Faq() {
       </Accordion.Item>
     </Accordion> */}
       <div className="accordion">
-        <Accordion>
+        <Accordion className="my-3">
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -70,7 +70,7 @@ function Faq() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion className="my-3">
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2a-content"
@@ -90,7 +90,7 @@ function Faq() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion className="my-3">
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2a-content"
@@ -107,7 +107,7 @@ function Faq() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion className="my-3">
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2a-content"
@@ -128,7 +128,7 @@ function Faq() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion className="my-3">
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2a-content"

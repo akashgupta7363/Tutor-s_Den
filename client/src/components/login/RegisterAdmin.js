@@ -4,6 +4,7 @@ import * as classes from "../../utils/styles";
 import FileBase from "react-file-base64";
 import { Link, useNavigate } from "react-router-dom";
 import * as api from "../../redux/api";
+import Spinner from "../../utils/Spinner";
 
 function RegisterAdmin() {
   const [loading, setLoading] = useState(false);
@@ -34,11 +35,10 @@ function RegisterAdmin() {
       alert("REGISTRATION Successfully");
       console.log(data);
       setLoading(false);
-
-      navigate("/login/adminLogin");
+      navigate("/login");
     } catch (error) {
-      alert(error);
-      console.log(error);
+      alert(error.message);
+      console.log(error.message);
       setLoading(false);
     }
   };
@@ -68,7 +68,7 @@ function RegisterAdmin() {
             </div>
           </div>
         </div>
-        <div className=" ml-10 mr-10 bg-white flex flex-col rounded-xl ">
+        <div className="overflow-scroll scrollbar-thumb-black ml-10 mr-10 bg-white flex flex-col rounded-xl ">
           <form className={classes.adminForm0} onSubmit={handleSubmit}>
             <div className={classes.adminForm1}>
               <div className={classes.adminForm2l}>
@@ -236,6 +236,17 @@ function RegisterAdmin() {
               >
                 Clear
               </button>
+            </div>
+            <div className={classes.loadingAndError}>
+              {loading && (
+                <Spinner
+                  message="Adding Admin"
+                  height={30}
+                  width={150}
+                  color="#111111"
+                  messageColor="blue"
+                />
+              )}
             </div>
           </form>
         </div>

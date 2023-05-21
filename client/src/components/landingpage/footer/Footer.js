@@ -6,18 +6,25 @@ const Footer = () => {
     <>
       <div className="footer">
         <nav class="navbar">
-          <div style={{ borderBottom: "2px solid black" }}>
-            <a class="navbar-brand" href="#" style={{ marginLeft: "6rem" }}>
-              <img
-                src="/education.png
+          <div
+            className="flex justify-between mr-6"
+            style={{ borderBottom: "2px solid black" }}
+          >
+            <div className="flex -ml-24">
+              <a class="navbar-brand" href="#" style={{ marginLeft: "6rem" }}>
+                <img
+                  src="/education.png
                          "
-                alt="Logo"
-                width="50px"
-                height="40px"
-              />
-              <span className="logo-den">Den</span>
-            </a>
-            <b style={{ marginRight: "2rem" }}>Back to top</b>
+                  alt="Logo"
+                  width="50px"
+                  height="40px"
+                />
+                <span className="logo-den">Den</span>
+              </a>
+            </div>
+            <div className="mt-6 text-xl font-bold">
+              <a href="#">Back to top</a>
+            </div>
           </div>
         </nav>
         <p className="copyright">

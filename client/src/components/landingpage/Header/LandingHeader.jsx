@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import "./landingheader.css";
+import Lottie from "lottie-react";
+import cls from "../../../assets/90714-online-learning.json";
 
 function LandingHeader() {
   return (
@@ -45,7 +47,8 @@ function LandingHeader() {
             </div>
           </div>
           <div className="right">
-            <img src="/illustration.svg" alt="Logo" />
+            <Lottie animationData={cls} />
+            {/* <img src="/illustration.svg" alt="Logo" /> */}
           </div>
         </div>
       </div>

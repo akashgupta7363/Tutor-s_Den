@@ -1,6 +1,6 @@
 import { Box, Button, Fade, Modal } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import re from "../../../../assets/not.pdf";
+import re from "../../../../assets/Facu.pdf";
 import { useState } from "react";
 import Backdrop from "@mui/material/Backdrop";
 const styleChild = {

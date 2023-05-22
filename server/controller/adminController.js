@@ -561,23 +561,23 @@ export const addStudent = async (req, res) => {
     let departmentHelper = existingDepartment.departmentCode;
 
     const students = await Student.find({ department });
-    let helper;
-    if (students.length < 10) {
-      helper = "00" + students.length.toString();
-    } else if (students.length < 100 && students.length > 9) {
-      helper = "0" + students.length.toString();
-    } else {
-      helper = students.length.toString();
-    }
-    var date = new Date();
-    var components = ["STU", date.getFullYear(), departmentHelper, helper];
+    // let helper;
+    // if (students.length < 10) {
+    //   helper = "00" + students.length.toString();
+    // } else if (students.length < 100 && students.length > 9) {
+    //   helper = "0" + students.length.toString();
+    // } else {
+    //   helper = students.length.toString();
+    // }
+    // var date = new Date();
+    // var components = ["STU", date.getFullYear(), departmentHelper, helper];
 
-    var username = components.join("");
+    var username = email.split("@")[0];
     let hashedPassword;
     const newDob = dob.split("-").reverse().join("-");
 
-    hashedPassword = await bcrypt.hash(newDob, 10);
-    var passwordUpdated = false;
+    hashedPassword = await bcrypt.hash(username, 10);
+    var passwordUpdated = true;
 
     const newStudent = await new Student({
       name,

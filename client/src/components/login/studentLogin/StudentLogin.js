@@ -43,6 +43,10 @@ const StudentLogin = () => {
       setPassword("");
     }
   }, [store.errors]);
+  const handleGuest = () => {
+    setUsername("ankitpathak12");
+    setPassword("ankitpathak12");
+  };
   return (
     <div className="bg-[#d65158] h-screen w-screen flex items-center justify-center">
       <div className="grid grid-cols-2">
@@ -103,12 +107,21 @@ const StudentLogin = () => {
               )}
             </div>
           </div>
-          <button
-            type="submit"
-            className="w-32 hover:scale-105 transition-all duration-150 rounded-lg flex items-center justify-center text-white text-base py-1 bg-[#04bd7d]"
-          >
-            Login
-          </button>
+
+          <div className="flex gap-6">
+            <button
+              type="submit"
+              className="w-32 hover:scale-105 transition-all duration-150 rounded-lg flex items-center justify-center text-white text-base py-1 bg-[#04bd7d]"
+            >
+              Login
+            </button>
+            <button
+              onClick={handleGuest}
+              className="w-32 hover:scale-105 transition-all duration-150 rounded-lg flex items-center justify-center text-white text-base py-1 bg-[#04bd7d]"
+            >
+              As a Gsuest
+            </button>
+          </div>
           {loading && (
             <Spinner
               message="Logging In"

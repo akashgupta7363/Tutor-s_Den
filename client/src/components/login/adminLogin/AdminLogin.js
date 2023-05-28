@@ -23,7 +23,10 @@ const AdminLogin = () => {
       setTranslate(true);
     }, 1000);
   }, []);
-
+  const handleGuest = () => {
+    setUsername("guest111");
+    setPassword("guest111");
+  };
   useEffect(() => {
     if (store.errors) {
       setError(store.errors);
@@ -47,7 +50,7 @@ const AdminLogin = () => {
     <div className="bg-[#04bd7d] h-screen w-screen flex items-center justify-center">
       <div className="grid grid-cols-2">
         <div
-          className={`h-96 w-96 bg-white flex items-center justify-center ${
+          className={`h-[26rem] w-96 bg-white flex items-center justify-center ${
             translate ? "translate-x-[12rem]" : ""
           }  duration-1000 transition-all rounded-3xl shadow-2xl`}
         >
@@ -60,7 +63,7 @@ const AdminLogin = () => {
         <form
           onSubmit={login}
           className={`${
-            loading ? "h-[27rem]" : "h-96"
+            loading ? "h-[27rem]" : "h-[26rem]"
           } w-96 bg-[#2c2f35] flex flex-col items-center justify-center ${
             translate ? "-translate-x-[12rem]" : ""
           }  duration-1000 transition-all space-y-6 rounded-3xl shadow-2xl`}
@@ -103,12 +106,20 @@ const AdminLogin = () => {
               )}
             </div>
           </div>
-          <button
-            type="submit"
-            className="w-32 hover:scale-105 transition-all duration-150 rounded-lg flex items-center justify-center text-white text-base py-1 bg-[#04bd7d]"
-          >
-            Login
-          </button>
+          <div className="flex gap-6">
+            <button
+              type="submit"
+              className="w-32 hover:scale-105 transition-all duration-150 rounded-lg flex items-center justify-center text-white text-base py-1 bg-[#04bd7d]"
+            >
+              Login
+            </button>
+            <button
+              onClick={handleGuest}
+              className="w-32 hover:scale-105 transition-all duration-150 rounded-lg flex items-center justify-center text-white text-base py-1 bg-[#04bd7d]"
+            >
+              As a Gsuest
+            </button>
+          </div>
           <Link
             to="/register"
             className="text-slate-200 hover:scale-110 transition delay-200"

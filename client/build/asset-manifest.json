@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5511f5cf.css",
+    "main.js": "/static/js/main.855ed74c.js",
+    "static/media/AdminModule.pdf": "/static/media/AdminModule.acde8623ab22155d2f2a.pdf",
+    "static/media/Facu.pdf": "/static/media/Facu.0bb69921fd69aa13d60e.pdf",
+    "static/media/not.pdf": "/static/media/not.ce57562bcf547d657a30.pdf",
+    "static/media/education.png": "/static/media/education.1c5b5727bab5eb613149.png",
+    "index.html": "/index.html",
+    "main.5511f5cf.css.map": "/static/css/main.5511f5cf.css.map",
+    "main.855ed74c.js.map": "/static/js/main.855ed74c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5511f5cf.css",
+    "static/js/main.855ed74c.js"
+  ]
+}

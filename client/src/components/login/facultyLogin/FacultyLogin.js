@@ -6,6 +6,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import Spinner from "../../../utils/Spinner";
 import { facultySignIn } from "../../../redux/actions/facultyActions";
+import { Link } from "react-router-dom";
 
 const FacultyLogin = () => {
   const [translate, setTranslate] = useState(false);
@@ -69,7 +70,19 @@ const FacultyLogin = () => {
             translate ? "-translate-x-[12rem]" : ""
           }  duration-1000 transition-all space-y-6 rounded-3xl shadow-2xl`}
         >
-          <h1 className="text-white text-3xl font-semibold">Faculty</h1>
+          <div className="">
+            <h1 className="text-white relative text-3xl font-semibold">
+              Faculty
+            </h1>
+            {translate ? (
+              <Link
+                to="/login"
+                className="text-white absolute right-4 top-4 text-sm "
+              >
+                back
+              </Link>
+            ) : null}
+          </div>
           <div className="space-y-1">
             <p className="text-[#515966] font-bold text-sm">Username</p>
             <div className="bg-[#515966] rounded-lg w-[18rem] flex  items-center">
